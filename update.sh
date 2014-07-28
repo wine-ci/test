@@ -2,9 +2,9 @@
 
 project=`basename \`pwd\``
 cd $project
-git show -s --format=%H &> ../HEAD.txt
+git show -s --format=%H > ../HEAD.txt
 git pull origin master --tags
-git show -s --format=%H &> ../new_HEAD.txt
+git show -s --format=%H > ../new_HEAD.txt
 cd ..
 if [ `cat new_HEAD.txt` != `cat HEAD.txt` ]; then
     new_HEAD=`cat new_HEAD.txt`
