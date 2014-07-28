@@ -9,7 +9,7 @@ cd ..
 if [ `cat new_HEAD.txt` != `cat HEAD.txt` ]; then
     new_HEAD=`cat new_HEAD.txt`
     git add -u
-    git commit -m "Update to $new_HEAD"
+    git commit -m "Update to $new_HEAD."
     git push origin master
 fi
-rm new_HEAD.txt
+rm new_HEAD.txt HEAD.txt
